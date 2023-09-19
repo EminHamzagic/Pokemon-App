@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import "../css/cards.css";
+import "../css/cardList.css";
 import Card from "./Card";
 
 export default function CardList() {
   const [pkmInfo, setPkmInfo] = useState([]);
 
   useEffect(() => {
+    setPkmInfo([]);
     fetch("https://pokeapi.co/api/v2/pokemon/?limit=10&offset=0")
       .then((data) => data.json())
       .then((pdata) =>
@@ -16,6 +17,7 @@ export default function CardList() {
               setPkmInfo((arr) => [
                 ...arr,
                 {
+                  id: data.id,
                   name: data.name,
                   weight: data.weight,
                   height: data.height,
@@ -27,19 +29,11 @@ export default function CardList() {
         })
       );
   }, []);
-
   return (
     <div className="cl_container">
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      {pkmInfo.map((pkm, index) => {
+        return <Card key={index} data={pkm} />;
+      })}
     </div>
   );
 }

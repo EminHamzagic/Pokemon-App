@@ -1,0 +1,45 @@
+.card_container {
+  width: 48%;
+  height: 15%;
+  border: 1px solid black;
+  border-radius: 50px;
+  background-color: rgb(255, 80, 80);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+}
+
+.card_container img {
+  width: 30%;
+  height: auto;
+}
+
+.pkm_info {
+  width: 40%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.pkmBody_info {
+  font-size: 12px;
+}
+
+.card_container p {
+  height: auto;
+}
+
+.type_container {
+  font-size: 14px;
+  font-weight: 800;
+  color: white;
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
