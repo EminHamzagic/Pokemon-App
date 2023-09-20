@@ -1,5 +1,28 @@
 .pag_container {
   width: 45%;
-  height: 8%;
-  border: 1px solid black;
+  height: 7%;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pag_container button {
+  width: 10%;
+  height: 80%;
+  margin: 0 10px 0 10px;
+  background-color: white;
+  font-size: 15px;
+  font-weight: 800;
+  border: 2px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  background-color: rgb(235, 217, 160);
+}
+
+.pag_container button:hover {
+  border-color: white;
+  color: white;
+  background-color: rgb(255, 47, 47);
 }
