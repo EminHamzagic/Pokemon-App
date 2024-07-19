@@ -7,6 +7,7 @@ import { PageContext } from "../contexts/PageContext";
 export default function CardList() {
   const [pkmInfo, setPkmInfo] = useState([]);
   // const [flag, setFlag] = useState(false);
+  // const [flag, setFlag] = useState(false);
   const [isFirst, setIsFirst] = useState(1);
 
   const { page, flag, setFlag } = useContext(PageContext);
